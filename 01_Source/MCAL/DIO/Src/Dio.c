@@ -98,6 +98,25 @@ void Dio_WriteChannel(u8 port, u8 channel, u8 level)
 		break;
 	}
 }
+
+void Dio_FlipChannel(u8 port, u8 channel)
+{
+	switch (port)
+	{
+	case DIO_PORTA:
+		TOG_BIT(PORTA,channel);
+		break;
+	case DIO_PORTB:
+		TOG_BIT(PORTA,channel);
+		break;
+	case DIO_PORTC:
+		TOG_BIT(PORTA,channel);
+		break;
+	case DIO_PORTD:
+		TOG_BIT(PORTA,channel);
+		break;
+	}
+}
 u8 Dio_ReadChannel(u8 port, u8 channel)
 {
 	u8 read=0;

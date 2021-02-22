@@ -37,5 +37,6 @@
 /*	Functions prototypes	*/
 void Dio_ConfigureChannel(u8 port, u8 channel, u8 dir);
 void Dio_WriteChannel(u8 port, u8 channel, u8 level);
+void Dio_FlipChannel(u8 port, u8 channel);
 u8 Dio_ReadChannel(u8 port, u8 channel);
 #endif /* DIO_H_ */
