@@ -52,6 +52,34 @@ void Dio_ConfigureChannel(u8 port, u8 channel, u8 dir)
 		break;
 	}
 }
+
+void Dio_ConfigurePort(u8 port,u8 dir,u8 mask)
+{
+	switch (port)
+	{
+	case DIO_PORTA:
+		DDRA&=~mask;
+		dir &=mask;
+		DDRA|=dir;
+		break;
+	case DIO_PORTB:
+		DDRB&=~mask;
+		dir &=mask;
+		DDRB|=dir;
+		break;
+	case DIO_PORTC:
+		DDRC&=~mask;
+		dir &=mask;
+		DDRC|=dir;
+		break;
+	case DIO_PORTD:
+		DDRD&=~mask;
+		dir &=mask;
+		DDRD|=dir;
+		break;
+	}
+}
+
 void Dio_WriteChannel(u8 port, u8 channel, u8 level)
 {
 	switch (port)
@@ -98,7 +126,32 @@ void Dio_WriteChannel(u8 port, u8 channel, u8 level)
 		break;
 	}
 }
-
+void Dio_WritePort(u8 port,u8 data,u8 mask)
+{
+	switch (port)
+	{
+	case DIO_PORTA:
+		PORTA&=~mask;
+		data &=mask;
+		PORTA|=data;
+		break;
+	case DIO_PORTB:
+		PORTB&=~mask;
+		data &=mask;
+		PORTB|=data;
+		break;
+	case DIO_PORTC:
+		PORTC&=~mask;
+		data &=mask;
+		PORTC|=data;
+		break;
+	case DIO_PORTD:
+		PORTD&=~mask;
+		data &=mask;
+		PORTD=data;
+		break;
+	}
+}
 void Dio_FlipChannel(u8 port, u8 channel)
 {
 	switch (port)
@@ -133,6 +186,23 @@ u8 Dio_ReadChannel(u8 port, u8 channel)
 		break;
 	case DIO_PORTD:
 		read =  GET_BIT(PIND,channel);
+		break;
+	}
+	return read;
+}
+u8 Dio_ReadPort(u8 port)
+{
+	u8 read=0;
+	switch (port)
+	{
+	case DIO_PORTA:
+		read = PINA;
+		break;
+	case DIO_PORTC:
+		read = PINA;
+		break;
+	case DIO_PORTD:
+		read = PINA;
 		break;
 	}
 	return read;
