@@ -1,9 +1,8 @@
-/*
+/*************************************
  * Dio.c
- *
  *  Created on: Feb 15, 2021
- *      Author: Eng_Fawzi
- */
+ *  Author: Eng_Fawzi
+ *************************************/
 #include "Dio.h"
 
 void Dio_ConfigureChannel(u8 port, u8 channel, u8 dir)
@@ -58,24 +57,16 @@ void Dio_ConfigurePort(u8 port,u8 dir,u8 mask)
 	switch (port)
 	{
 	case DIO_PORTA:
-		DDRA&=~mask;
-		dir &=mask;
-		DDRA|=dir;
+		DDRA=(DDRA & ~mask)|(dir & mask);
 		break;
 	case DIO_PORTB:
-		DDRB&=~mask;
-		dir &=mask;
-		DDRB|=dir;
+		DDRB=(DDRB & ~mask)|(dir & mask);
 		break;
 	case DIO_PORTC:
-		DDRC&=~mask;
-		dir &=mask;
-		DDRC|=dir;
+		DDRC=(DDRC & ~mask)|(dir & mask);
 		break;
 	case DIO_PORTD:
-		DDRD&=~mask;
-		dir &=mask;
-		DDRD|=dir;
+		DDRD=(DDRD & ~mask)|(dir & mask);
 		break;
 	}
 }
@@ -131,24 +122,16 @@ void Dio_WritePort(u8 port,u8 data,u8 mask)
 	switch (port)
 	{
 	case DIO_PORTA:
-		PORTA&=~mask;
-		data &=mask;
-		PORTA|=data;
+		PORTA=(PORTA & ~mask)|(data & mask);
 		break;
 	case DIO_PORTB:
-		PORTB&=~mask;
-		data &=mask;
-		PORTB|=data;
+		PORTB=(PORTB & ~mask)|(data & mask);
 		break;
 	case DIO_PORTC:
-		PORTC&=~mask;
-		data &=mask;
-		PORTC|=data;
+		PORTC=(PORTC & ~mask)|(data & mask);
 		break;
 	case DIO_PORTD:
-		PORTD&=~mask;
-		data &=mask;
-		PORTD=data;
+		PORTD=(PORTD & ~mask)|(data & mask);
 		break;
 	}
 }

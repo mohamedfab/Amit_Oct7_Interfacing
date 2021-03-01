@@ -1,21 +1,23 @@
-/*
+/************************************
   * main.c
   * Created on: Feb 8, 2021
-  * Author: bhaa
-  */
+  * Author: MFawzi
+  *********************************/
 
 #include "Dio_Reg.h"
 #include "Std_Types.h"
 #include "util/delay.h"
 #include "Bit_Math.h"
 #include "Dio.h"
-#include "SSD.h"
+#include "Lcd.h"
+
 
 int main(void)
 {
-	SSD_Init();
+	Lcd_Init();
+	Lcd_DisplayStr((u8*)"Hello LCD.........");
 	while(1)
 	{
-		SSD_DisplayNum(75);
+
 	}
 }
