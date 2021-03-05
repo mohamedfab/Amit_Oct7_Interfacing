@@ -12,7 +12,7 @@ void Button_Init(void)
 {
 	Dio_ConfigureChannel(DIO_PORTB,CHANNEL0,INPUT);
 	Dio_ConfigureChannel(DIO_PORTB,CHANNEL4,INPUT);
-	Dio_ConfigureChannel(DIO_PORTB,CHANNEL2,INPUT);
+	Dio_ConfigureChannel(DIO_PORTD,CHANNEL2,INPUT);
 }
 boolean Button_Pressed(u8 Button)
 {
