@@ -117,6 +117,25 @@ void Dio_WriteChannel(u8 port, u8 channel, u8 level)
 		break;
 	}
 }
+void Dio_EnablePullUp(u8 port, u8 channel)
+{
+	switch (port)
+	{
+	case DIO_PORTA:
+		SET_BIT(PORTA,channel);
+		break;
+	case DIO_PORTB:
+		SET_BIT(PORTB,channel);
+		break;
+	case DIO_PORTC:
+		SET_BIT(PORTC,channel);
+		break;
+	case DIO_PORTD:
+
+		SET_BIT(PORTD,channel);
+		break;
+	}
+}
 void Dio_WritePort(u8 port,u8 data,u8 mask)
 {
 	switch (port)
