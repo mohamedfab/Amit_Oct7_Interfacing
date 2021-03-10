@@ -10,17 +10,25 @@
 #include "Bit_Math.h"
 #include "Dio.h"
 #include "Lcd.h"
+#include "Led.h"
 #include "KeyPad.h"
+#include <avr/interrupt.h>
+#include "Interrupt_Util.h"
+#include "Ext_Int.h"
+
+
+ISR(INT0_vect)
+{
+	Led_Toggle(LED0);
+}
 int main(void)
 {
-	u8 key;
-	Lcd_Init();
-	KeyPad_Init();
-	Lcd_Cmd(_LCD_CURSOR_OFF);
+	Led_Init();
+	ENABLE_GLOBAL_INTERRUPT();
+	Ext_Int_Enable(EXT_INT0);
+	Ext_Int_Int0Sence(INT0_RISING_EDGE);
 	while(1)
 		{
-			key = KeyPad_Scan();
-			Lcd_GotoRowColumn(0, 0);
-			Lcd_DisplayChr(key);
+			;
 		}
 }
