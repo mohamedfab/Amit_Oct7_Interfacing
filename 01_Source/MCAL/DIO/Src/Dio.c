@@ -162,13 +162,13 @@ void Dio_FlipChannel(u8 port, u8 channel)
 		TOG_BIT(PORTA,channel);
 		break;
 	case DIO_PORTB:
-		TOG_BIT(PORTA,channel);
+		TOG_BIT(PORTB,channel);
 		break;
 	case DIO_PORTC:
-		TOG_BIT(PORTA,channel);
+		TOG_BIT(PORTC,channel);
 		break;
 	case DIO_PORTD:
-		TOG_BIT(PORTA,channel);
+		TOG_BIT(PORTD,channel);
 		break;
 	}
 }
