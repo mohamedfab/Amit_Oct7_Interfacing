@@ -1,11 +1,13 @@
-/************************************
-  * main.c
-  * Created on: Feb 8, 2021
-  * Author: MFawzi
-  *********************************/
+/***********************************
+ * Adc_Private.h
+ *  Created on: Mar 15, 2021
+ *  Author: Eng_Fawzi
+ **********************************/
 
 #include "Dio_Reg.h"
 #include "Std_Types.h"
+#include "stdlib.h"
+#include "stdio.h"
 #include "util/delay.h"
 #include "Bit_Math.h"
 #include "Dio.h"
@@ -16,18 +18,13 @@
 #include "Interrupt_Util.h"
 #include "Ext_Int.h"
 
-ISR(INT0_vect)
+int main()
 {
-	Led_Toggle(LED0);
-}
-int main(void)
-{
-	Led_Init();
-	ENABLE_GLOBAL_INTERRUPT();
-	Ext_Int_Enable(EXT_INT0);
-	Ext_Int_Int0Sence(INT0_RISING_EDGE);
+
 	while(1)
 		{
+
 			;
 		}
+return 0;
 }
