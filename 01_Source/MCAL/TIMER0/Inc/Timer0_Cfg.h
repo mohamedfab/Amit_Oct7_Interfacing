@@ -1,10 +1,9 @@
-/*
- * Timer0_Cfg.h
- *
- *  Created on: Mar 23, 2021
- *      Author: Eng_Fawzi
- */
-
+/********************************
+ * File  	:  Timer0_Cfg.h
+ * Date	 	:  Mar 23, 2021
+ * Target	:  ATMEGA32
+ * Author	:  Eng_Fawzi
+ ********************************/
 #ifndef TIMER0_CFG_H_
 #define TIMER0_CFG_H_
 

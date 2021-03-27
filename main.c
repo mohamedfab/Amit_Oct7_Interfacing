@@ -17,10 +17,10 @@
 #include <avr/interrupt.h>
 #include "Interrupt_Util.h"
 #include "Ext_Int.h"
+#include "avr/io.h"
 
 int main()
 {
-
 	while(1)
 		{
 
