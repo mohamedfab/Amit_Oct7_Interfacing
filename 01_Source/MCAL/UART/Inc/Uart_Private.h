@@ -11,12 +11,12 @@
 #include "Std_Types.h"
 #include "Uart_Private.h"
 
-#define UART_UDR_REG				(*(volatile u8*)0x2C)
-#define UART_UCSRA_REG				(*(volatile u8*)0x2B)
-#define UART_UCSRB_REG				(*(volatile u8*)0x2A)
-#define UART_UBRRH_REG				(*(volatile u8*)0x40)
-#define UART_UCSRC_REG				(*(volatile u8*)0x40)
-#define UART_UBRRL_REG				(*(volatile u8*)0x29)
+#define UART_UDR_REG				(*(volatile u8* const)0x2C)
+#define UART_UCSRA_REG				(*(volatile u8* const)0x2B)
+#define UART_UCSRB_REG				(*(volatile u8* const)0x2A)
+#define UART_UBRRH_REG				(*(volatile u8* const)0x40)
+#define UART_UCSRC_REG				(*(volatile u8* const)0x40)
+#define UART_UBRRL_REG				(*(volatile u8* const)0x29)
 
 #define RXEN_BIT_NO						(4)
 #define TXEN_BIT_NO						(3)

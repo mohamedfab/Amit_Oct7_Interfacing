@@ -23,7 +23,7 @@ void UART_Init(u16 baudRate)
 void UART_TransmitChr(u8 data)
 {
 	/* Wait for empty transmit buffer */
-	while (!(CHECK_BIT(UART_UCSRA_REG,UDRE_BIT_NO)))
+	while (!(GET_BIT(UART_UCSRA_REG,UDRE_BIT_NO)))
 			;
 	/* Put data into buffer, sends the data */
 	UART_UDR_REG = data;
@@ -42,7 +42,7 @@ void UART_TransmitStr(u8 *str)
 u8 UART_ReceiveChr(void)
 {
 	/* Wait for data to be received */
-	while (!(CHECK_BIT(UART_UCSRA_REG,RXC_BIT_NO)))
+	while (!(GET_BIT(UART_UCSRA_REG,RXC_BIT_NO)))
 			;
 	/* Get and return received data from buffer */
 	return UART_UDR_REG;
