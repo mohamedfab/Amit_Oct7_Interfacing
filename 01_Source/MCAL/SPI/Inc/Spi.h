@@ -19,8 +19,9 @@
 #define SPI_SCK_FREQ_FCPU_DIV_64		(2<<0)
 #define SPI_SCK_FREQ_FCPU_DIV_128		(3<<0)
 
-void Spi_Init(u16 baudRate);
-void Spi_TransmitChr(u8 data);
-void Spi_TransmitStr(u8 *str);
-u8 Spi_ReceiveChr(void);
+void Spi_MasterInit(void);
+void Spi_SlaveInit(void);
+void Spi_MasterWrite(u8 data);
+u8 Spi_MasterRead(void);
+u8 Spi_SlaveRead(void);
 #endif  /* UART_H */
