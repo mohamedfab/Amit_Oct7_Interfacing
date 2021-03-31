@@ -18,12 +18,12 @@
 #include "Interrupt_Util.h"
 #include "Ext_Int.h"
 #include "avr/io.h"
-
+#include "Uart.h"
+#include "Spi.h"
 int main()
 {
 	while(1)
 		{
-
 			;
 		}
 	return 0;
