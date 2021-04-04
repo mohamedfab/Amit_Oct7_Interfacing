@@ -1,9 +1,8 @@
 /***********************************
- * Adc_Private.h
+ * 	main.c
  *  Created on: Mar 15, 2021
  *  Author: Eng_Fawzi
  **********************************/
-
 #include "Dio_Reg.h"
 #include "Std_Types.h"
 #include "stdlib.h"
@@ -18,10 +17,17 @@
 #include "Interrupt_Util.h"
 #include "Ext_Int.h"
 #include "avr/io.h"
-#include "Uart.h"
-#include "Spi.h"
+#include "Eeprom24C16.h"
 int main()
 {
+	u8 chr;
+	Lcd_Init();
+	Lcd_Cmd(_LCD_CURSOR_OFF);
+	Eeprom24C32_Init();
+	Eeprom24C32_WriteByte(0, 'A');
+	chr = Eeprom24C32_ReadByte(0);
+	Lcd_GotoRowColumn(0, 0);
+	Lcd_DisplayChr(chr);
 	while(1)
 		{
 			;
