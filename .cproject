@@ -32,6 +32,9 @@
 								<option id="de.innot.avreclipse.compiler.option.optimize.1776038466" name="Optimization Level" superClass="de.innot.avreclipse.compiler.option.optimize"/>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="de.innot.avreclipse.compiler.option.incpath.1332808868" name="Include Paths (-I)" superClass="de.innot.avreclipse.compiler.option.incpath" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;..\01_Source\MCAL\ADC\Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;..\01_Source\HAL\EEPROM24C16\Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;..\01_Source\MCAL\EEPROM\Inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;..\01_Source\MCAL\I2C\Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;..\01_Source\MCAL\SPI\Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;..\01_Source\MCAL\UART\Inc&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;..\01_Source\MCAL\WDG\Inc&quot;"/>
