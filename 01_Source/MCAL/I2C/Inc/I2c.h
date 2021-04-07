@@ -10,7 +10,6 @@
 
 #include "Std_Types.h"
 #include "Bit_Math.h"
-#include "I2c_Cfg.h"
 #include "I2c_Private.h"
 #include "Dio.h"
 

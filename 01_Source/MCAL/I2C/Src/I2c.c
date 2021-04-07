@@ -25,7 +25,6 @@ void I2C_SlaveInit(u8 addr)
     /* enable I2C Module	*/
 	/*	enable ACK check	*/
 	I2C_TWCR_REG |=I2C_ENABLE|I2C_ENABLE_ACK;
-
 }
 boolean I2C_StartCondition(void)
 {

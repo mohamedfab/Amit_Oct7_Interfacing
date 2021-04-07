@@ -27,7 +27,7 @@
 #define I2C_INTERRUPT_FLAG				(1<<7)
 #define I2C_ENABLE_ACK					(1<<6)
 #define I2C_INTERRUPT_FLAG_BIT_NO		 (7)
-#define I2C_SLAVE_RESPONSE_BIT_NO			(0)
+#define I2C_SLAVE_RESPONSE_BIT_NO		 (0)
 
 /**********************************************************************************************************************
  *  GLOBAL FUNCTION MACROS
