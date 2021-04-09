@@ -63,6 +63,16 @@ u8 Spi_MasterRead(void)
 	/*	read the data register	*/
 	return SPI_SPDR_REG;
 }
+
+u8 Spi_MasterTranseve(u8 data)
+{
+	/*	load SPI data register with a byte to send	*/
+	SPI_SPDR_REG = data;
+	/*	wait until byte sent	*/
+	while(!(GET_BIT(SPI_SPSR_REG,SPI_SPIF_BIT_NO)));
+	/*	flush the data register	*/
+	return SPI_SPDR_REG;
+}
 u8 Spi_SlaveRead(void)
 {
 	/*	wait until byte received	*/
