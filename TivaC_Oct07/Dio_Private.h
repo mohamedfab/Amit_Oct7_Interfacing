@@ -6,6 +6,7 @@
 
 #ifndef DIO_PRIVATE_H_
 #define DIO_PRIVATE_H_
+
 #include "Std_Types.h"
 
 #define GPIO_PORTA_APB_BASE         (0x40004000)
@@ -16,9 +17,9 @@
 #define GPIO_PORTF_APB_BASE         (0x40025000)
 #define RCG_RCGC2_BASE              (0x400FE000)
 
-#define GPIO_GPIODATA_OFFSET            (0x000)
+#define GPIO_GPIODATA_OFFSET            (0x3FC)
 #define GPIO_GPIODIR_OFFSET             (0x400)
-#define GPIO_RCG_OFFSET                 (0x108)
+#define GPIO_RCG_OFFSET                 (0x608)
 #define GPIO_GPIODEN_OFFSET             (0x51C)
 #define GPIO_GPIOLOCK_OFFSET            (0x520)
 #define GPIO_GPIOCR_OFFSET              (0x524)
